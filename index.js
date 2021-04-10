@@ -3,7 +3,7 @@ const express = require('express'); //start the server
 const app = express(); //start the server
 const mongoose = require("mongoose"); //Mongoose provides a straight-forward, schema-based solution to model your application data.
 const TodoTask = require("./models/TodoTask"); //models
-let port = process.env.PORT || 8080;
+let port = process.env.PORT || 5000;
 
 require("dotenv").config(); //connect to the database
 
