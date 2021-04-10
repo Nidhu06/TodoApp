@@ -3,6 +3,7 @@ const express = require('express'); //start the server
 const app = express(); //start the server
 const mongoose = require("mongoose"); //Mongoose provides a straight-forward, schema-based solution to model your application data.
 const TodoTask = require("./models/TodoTask"); //models
+let port = process.env.PORT || 8080;
 
 require("dotenv").config(); //connect to the database
 
@@ -17,7 +18,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
     console.log("Connected to db!");
 
 
-    app.listen(3000, () => console.log("Server is On")); //tell express app to listen to port 3000
+    app.listen(port, () => console.log("Server is On"));
 });
 
 
